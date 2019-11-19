@@ -1,0 +1,14 @@
+import numpy as np 
+a = np.linspace(1,100,100)
+a.resize((10,10))
+a2 = a**2
+A = a2.astype(int)
+print("Your 10x10 array: \n",A)
+print("\n")
+print("Type divByThree(A)")
+def divByThree(A):
+    d3 = A%3
+    t = A[d3==0]
+    res = print("The elements on array A that are divisible by 3 are: \n",t)
+    np.save("div_by_3.npy",t)
+    return res
