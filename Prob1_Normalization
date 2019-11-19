@@ -1,0 +1,12 @@
+import numpy as np
+X = np.random.random((5,5))
+print("Your 5x5 random array is: \n",X)
+print("\n")
+print("Type normalization(X) to normalize your array")
+def normalization(X):
+    x = np.mean(X)
+    s = np.std(X)
+    Z = (X - x)/s
+    nA = print("Your normalized array is: \n",Z)
+    np.save("X_normalized.npy",Z)
+    return nA
